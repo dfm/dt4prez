@@ -44,11 +44,11 @@ if len(random_seed):
     np.random.seed(int(random_seed))
 seed = input("Seed dialog: ")
 
-sentence = "" + seed
+sentence = "" + seed.strip()
 generated = "" + sentence
 sentence = sentence[-maxlen:]
 if len(sentence) < maxlen:
-    sentence = ("\n" * (maxlen - len(sentence))) + sentence
+    sentence = (" " * (maxlen - len(sentence))) + sentence
 sys.stdout.write(generated)
 sys.stdout.flush()
 
