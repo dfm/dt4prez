@@ -1,0 +1,3 @@
+[submodule "trump-speeches"]
+	path = trump-speeches
+	url = https://github.com/ryanmcdermott/trump-speeches.git
