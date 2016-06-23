@@ -5,6 +5,7 @@ from __future__ import division, print_function
 
 import os
 import json
+import codecs
 import argparse
 import numpy as np
 
@@ -18,7 +19,7 @@ parser.add_argument("-o", "--output-dir", default="output",
 args = parser.parse_args()
 outdir = args.output_dir
 
-with open("trump-speeches/speeches.txt", "r") as f:
+with codecs.open("trump-speeches/speeches.txt", "r", "utf-8") as f:
     lines = [line.strip() for line in f if len(line.strip())]
 text = " ".join(lines)
 text = text.replace("–", "-")
